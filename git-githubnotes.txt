@@ -1,0 +1,25 @@
+Git Github Notes 
+Commands:
+Git status
+git init
+git add
+git commit -m "msg"
+git log
+git config 
+git push -u origin master
+git pull origin master/branchname
+git diff filename
+git diff --staged filename
+git reset filename
+git checkouts filename 
+git add -A stages all 
+git add . stages new and modified
+git add -u stages modified and deleted
+git clone url
+touch .gitignore //create the empty filename
+git branch name 
+git checkout branchname
+git merge branchname //you must be  oustide of that branch
+git branch -d branchname //delete the branch
+git push origin --delete branchname.
+
