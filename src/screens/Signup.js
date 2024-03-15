@@ -20,7 +20,7 @@ export default function Signup() {
       let longitude = res.coords.longitude;
       return {lat : latitude, long : longitude}
     })
-    const response = await fetch("https://food-backend-tjsa.onrender.com/api/auth/getlocation", {
+    const response = await fetch("http://localhost:5000/api/auth/getlocation", {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -36,7 +36,7 @@ export default function Signup() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try{
-    const response = await fetch("https://food-backend-tjsa.onrender.com/api/auth/createuser", {
+    const response = await fetch("http://localhost:5000/api/auth/createuser", {
       // credentials: 'include',
       // Origin:"http://localhost:3000/login",
       method: 'POST',
@@ -54,7 +54,8 @@ export default function Signup() {
 
     }
     if (!response.ok) {
-      throw new Error(json.errors ? json.errors.map(error => error.msg).join(', ') : 'Something went wrong check credentials');
+      console.log(response);
+      throw new Error(json?.error);
     }}
     catch (error) {
       toast.error(error.message);

@@ -26,7 +26,7 @@ export default function Cart() {
     const headers={
       'Content-Type':'application/json'
     }
-    const response = await fetch("https://food-backend-tjsa.onrender.com/api/auth/payment", {
+    const response = await fetch("http://localhost:5000/api/auth/payment", {
       // credentials: 'include',
       // Origin:"http://localhost:3000/login",
       method: 'POST',
@@ -63,7 +63,7 @@ export default function Cart() {
     
     // if(result.error){console.log(response.error);}
     // console.log(data,localStorage.getItem("userEmail"),new Date())
-    // let response = await fetch("https://food-backend-tjsa.onrender.com/api/auth/orderData", {
+    // let response = await fetch("http://localhost:5000/api/auth/orderData", {
     //   // credentials: 'include',
     //   // Origin:"http://localhost:3000/login",
     //   method: 'POST',
